@@ -1,5 +1,0 @@
-data/store.json
-uploads/*
-!uploads/.gitkeep
-.env
-node_modules
