@@ -1,4 +1,6 @@
-// Vercel serverless entrypoint for the Fizzora Node application.
-const { server, initialize } = require('../server');
-initialize();
-module.exports = server.listeners('request')[0];
+
+const { server } = require('../server');
+
+module.exports = function handler(req, res) {
+  server.emit('request', req, res);
+};
